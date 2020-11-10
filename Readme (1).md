@@ -65,7 +65,7 @@ The steps to use this VI are as follows:
                                                               
 **1. Set overall parameters**
 1) Under "Path to input CSV file", type in the path to the CSV file containing the filepaths for the tracks to calibrate, together with the input parameters for each track<a href="#*">*</a>. 
-2) Under "Path to output CSV file", type in the path to the CSV file that you want to save the VI's output to. The VI will append to the rows of this CSV file if it already exists, and will the create the CSV file if it does not already exist <a href="#**"> **</a>. Click here</a> for information.
+2) Under "Path to output CSV file", type in the path to the CSV file that you want to save the VI's output to. The VI will append to the rows of this CSV file if it already exists, and will the create the CSV file if it does not already exist <a href="#**"> **</a>.
 
 **2. Set Leq Measurement Parameters**
 1) Under both "Recording channel (left)" and "Recording channel (right)", enter the corresponding sensitivity, units of measurement, value of the reference for dB calculation, and the pregain of the microphones corresponding to the left and right channels of the head and torso simulator, respectively.
