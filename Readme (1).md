@@ -103,7 +103,7 @@ Final results for previous track:
     - "Final Leq" -- The Leq value measured by the VI when the audio track is played back at the gain value in "Final gain".
     - "Total # of calls to MeasureLeq" -- The number of times that MeasureLeq was called for the previous track.
 
-Except for "Final results for previous track", all the variables will be initialized to 0 at the end of each file and updated when callcalled.
+Except for "Final results for previous track", all the variables will be initialized to 0 at the end of each file and updated when called.
 
 Footnotes
 ~~~
@@ -121,6 +121,8 @@ Footnotes
                                                    is considered unsuccessful if the number of iterations exceeds this value.
     - "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
                                                  is considered unsuccessful if the number of iterations exceeds this value.
+~~~
+~~~
 **The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
 The header will contain the following columns in order:
     - "Filepath" -- The path to the audio track to be calibrated.
