@@ -120,7 +120,7 @@ Footnotes
                                                    is considered unsuccessful if the number of iterations exceeds this value.
     - "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
                                                  is considered unsuccessful if the number of iterations exceeds this value.
-\*\*The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
+\**\The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
 The header will contain the following columns in order:
     - "Filepath" -- The path to the audio track to be calibrated.
     - "Gain" -- A positive real number specifying the gain that needs to be applied to the audio track to calibrate it to the
