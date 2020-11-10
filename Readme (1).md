@@ -106,8 +106,8 @@ Final results for previous track:
 Except for "Final results for previous track", all the variables will be initialized to 0 at the end of each file and updated when called.
 
 Footnotes
-~~~
-*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:
+
+<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:
     - "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
     - "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
     - "Tolernce (T)" -- The tolerance of current track for the calibration, in decibels. T must be a positive real number.
@@ -120,8 +120,7 @@ Footnotes
     - "Max. iterations for boundary search (N)" -- The maximum number of iterations allowed for the boundary search. The search
                                                    is considered unsuccessful if the number of iterations exceeds this value.
     - "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
-                                                 is considered unsuccessful if the number of iterations exceeds this value.
-~~~
+                                                 is considered unsuccessful if the number of iterations exceeds this value.</p>
 ~~~
 **The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
 The header will contain the following columns in order:
