@@ -106,6 +106,7 @@ Final results for previous track:
 Except for "Final results for previous track", all the variables will be initialized to 0 at the end of each file and updated when callcalled.
 
 Footnotes
+~~~
 *The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:
     - "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
     - "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
@@ -120,7 +121,7 @@ Footnotes
                                                    is considered unsuccessful if the number of iterations exceeds this value.
     - "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
                                                  is considered unsuccessful if the number of iterations exceeds this value.
-\**\The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
+**The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
 The header will contain the following columns in order:
     - "Filepath" -- The path to the audio track to be calibrated.
     - "Gain" -- A positive real number specifying the gain that needs to be applied to the audio track to calibrate it to the
@@ -135,8 +136,10 @@ The header will contain the following columns in order:
     - "Date" -- System date when the VI accomplished searching for the audio track located at the path in "Filepath".
     - "Time" -- System time when the VI accomplished searching for the audio track located at the path in "Filepath".
 If many values in the "Gain" column are -1 (indicating many unsuccessful searches), try increasing the value of N, M, or T, in that order. If many values in the "Within range" column are "N", try increasing the physical gain of your system (e.g. turn up your volumn knob).
-
-<p>***<p>Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.
+~~~
+~~~
+***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.
+~~~
 
 Contact
 -------
