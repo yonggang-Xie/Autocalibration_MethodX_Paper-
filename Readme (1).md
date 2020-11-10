@@ -88,6 +88,7 @@ The "3. Current Status" tab will show the following items:
     
 *Input parameters for current track: *
 - All input parameters for the current track as read from the input CSV file headers*.
+
 *Results for current track:*
 - "Adjusted initial guess" -- The gain after the first adjustment to the initial guess (denoted as G' in our paper).
 - "Boundary search iteration (n)" -- The current iteration of the boundary search, or 0 if boundary search has not started.
@@ -98,6 +99,7 @@ The "3. Current Status" tab will show the following items:
                         the Leq value in "Current Leq (C)". Otherwise, this will be 0.
 - "Current Leq (C)" -- If the binary search has started, this will be the Leq value measured by the VI when the current 
                        audio track is played back at the gain value in "Current gain (G)". Otherise, this will be 0.
+
 *Final results for previous track:*
 - "Final gain" -- The gain that needs to be applied to the previous audio track to calibrate it to the value in "Final Leq".
 - "Final Leq" -- The Leq value measured by the VI when the audio track is played back at the gain value in "Final gain".
@@ -108,7 +110,7 @@ Except for "Final results for previous track", all the variables will be initial
 Footnotes
 ---------
 
-<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:</p>
+**<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:</p>**
 - "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
 - "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
 - "Tolernce (T)" -- The tolerance of current track for the calibration, in decibels. T must be a positive real number.
