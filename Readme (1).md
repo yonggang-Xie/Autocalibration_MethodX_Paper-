@@ -110,7 +110,8 @@ Except for "Final results for previous track", all the variables will be initial
 Footnotes
 ---------
 
-__<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:</p>__
+<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:</p>
+
 - "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
 - "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
 - "Tolernce (T)" -- The tolerance of current track for the calibration, in decibels. T must be a positive real number.
