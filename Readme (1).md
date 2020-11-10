@@ -64,14 +64,14 @@ The VI searches for the suitable gains by firstly adjusting an initial guess bas
 The steps to use this VI are as follows:
                                                               
 **1. Set overall parameters**
-1) Under "Path to input CSV file", type in the path to the CSV file containing the filepaths for the tracks to calibrate, together with the input parameters for each track*<a href="one star">. Click here</a> for information.
-2) Under "Path to output CSV file", type in the path to the CSV file that you want to save the VI's output to. The VI will append to the rows of this CSV file if it already exists, and will the create the CSV file if it does not already exist**<a href="two stars">. Click here</a> for information.
+1) Under "Path to input CSV file", type in the path to the CSV file containing the filepaths for the tracks to calibrate, together with the input parameters for each track<a href="#*">*</a>. 
+2) Under "Path to output CSV file", type in the path to the CSV file that you want to save the VI's output to. The VI will append to the rows of this CSV file if it already exists, and will the create the CSV file if it does not already exist <a href="#**"> **</a>. Click here</a> for information.
 
 **2. Set Leq Measurement Parameters**
 1) Under both "Recording channel (left)" and "Recording channel (right)", enter the corresponding sensitivity, units of measurement, value of the reference for dB calculation, and the pregain of the microphones corresponding to the left and right channels of the head and torso simulator, respectively.
 2) Under "Playback Device ID", enter the integer corresponding to the device ID of your playback device (which should normally be a pair of circumaural headphones or a soundcard). To check the device IDs of all playback/recording devices on your system, please refer to the tab "X. Sound Device List".
 3) Under "Weighting setting", select the weighting filter to be applied to the values recorded by the micrphones on the head and torso simulator.
-4) If necessary, the "XControl Settings" panel allows you to specify additional device settings according to your recording devices***<a href="three stars">. Click here</a> for information. These include:
+4) If necessary, the "XControl Settings" panel allows you to specify additional device settings according to your recording devices <a href="#***">***. These include:
      - "NI-DAQmx Channel" -- The names of the input channels corresponding to the left and right channels of the head and torso 
                              simulator. The left channel name should be above the right channel name in this column. E.g. if
                              "cDAQ1Mod1/ai1" corresponds to the left channel and "cDAQ1Mod1/ai0" corresponds to the right
@@ -87,7 +87,7 @@ The "3. Current Status" tab will show the following items:
 - "Number of tracks to calibrate" -- Number of files to calibrate, as read by the VI from your input CSV file.
     
 _Input parameters for current track:_
-- All input parameters for the current track as read from the input CSV file headers*<a href="one star">. Click here</a> for information</p>
+- All input parameters for the current track as read from the input CSV file headers<a href="#*">*</a>. </p>
 
 *Results for current track:*
 - "Adjusted initial guess" -- The gain after the first adjustment to the initial guess (denoted as G' in our paper).
@@ -110,7 +110,7 @@ Except for "Final results for previous track", all the variables will be initial
 Footnotes
 ---------
 
-<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:</p><a name="one star">
+<p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:</p><a name="*">
 
 - "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
 - "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
@@ -127,7 +127,7 @@ Footnotes
                                              is considered unsuccessful if the number of iterations exceeds this value.
 
 <p>**The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
-The header will contain the following columns in order:</p><a name="two stars">
+The header will contain the following columns in order:</p><a name='**'>
 
 - "Filepath" -- The path to the audio track to be calibrated.
 - "Gain" -- A positive real number specifying the gain that needs to be applied to the audio track to calibrate it to the
@@ -143,7 +143,7 @@ The header will contain the following columns in order:</p><a name="two stars">
 - "Time" -- System time when the VI accomplished searching for the audio track located at the path in "Filepath".
 If many values in the "Gain" column are -1 (indicating many unsuccessful searches), try increasing the value of N, M, or T, in that order. If many values in the "Within range" column are "N", try increasing the physical gain of your system (e.g. turn up your volumn knob).
 
-<p>***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.</p><a name="three stars">
+<p>***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.</p><a name="***">
 
 Contact
 -------
