@@ -47,7 +47,7 @@ System setup <a name='system_setup'>
 ------------
 The system we used to test the code in this repository is as follows: 
 - OS: Windows 10
-- Processor: Intel Core i7-7700HQ CPU@2.80GHz
+<p>- Processor: Intel Core i7-7700HQ CPU@2.80GHz</p>
 - RAM: 16.0GB
 
 The main driver and software versions were:
