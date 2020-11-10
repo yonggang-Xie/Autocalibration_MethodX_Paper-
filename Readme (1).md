@@ -86,8 +86,9 @@ The "3. Current Status" tab will show the following items:
 - "Progress (%)" -- The proportion of tracks for which an appropriate gain has been found to calibrate it to the desired Leq,                                                       expressed as a percentage. 
 - "Number of tracks to calibrate" -- Number of files to calibrate, as read by the VI from your input CSV file.
     
-*Input parameters for current track: *<p>
+_Input parameters for current track:_
 - All input parameters for the current track as read from the input CSV file headers*.</p>
+
 *Results for current track:*
 - "Adjusted initial guess" -- The gain after the first adjustment to the initial guess (denoted as G' in our paper).
 - "Boundary search iteration (n)" -- The current iteration of the boundary search, or 0 if boundary search has not started.
@@ -141,10 +142,6 @@ The header will contain the following columns in order:</p>__
 If many values in the "Gain" column are -1 (indicating many unsuccessful searches), try increasing the value of N, M, or T, in that order. If many values in the "Within range" column are "N", try increasing the physical gain of your system (e.g. turn up your volumn knob).
 
 __<p>***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.</p>__
-
-# tag 1 
-## TAG2
-### tag 3
 
 Contact
 -------
