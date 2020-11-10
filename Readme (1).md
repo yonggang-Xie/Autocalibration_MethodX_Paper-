@@ -83,13 +83,13 @@ The steps to use this VI are as follows:
 **3. Run VI (Ctrl+R) and Check Current Status**
 
 The "3. Current Status" tab will show the following items:
-- "Progress (%)" -- The proportion of tracks for which an appropriate gain has been found to calibrate it to the desired Leq, expressed as a percentage. 
+- "Progress (%)" -- The proportion of tracks for which an appropriate gain has been found to calibrate it to the desired Leq,                                                       expressed as a percentage. 
 - "Number of tracks to calibrate" -- Number of files to calibrate, as read by the VI from your input CSV file.
     
 *Input parameters for current track: *
 - All input parameters for the current track as read from the input CSV file headers*.
 *Results for current track:*
-- "Adjusted initial guess": The gain after the first adjustment to the initial guess (denoted as G' in our paper).
+- "Adjusted initial guess" -- The gain after the first adjustment to the initial guess (denoted as G' in our paper).
 - "Boundary search iteration (n)" -- The current iteration of the boundary search, or 0 if boundary search has not started.
 - "Lower limit (L)" -- The lower limit found by the boundary search, displayed after it has completed.
 - "Upper limit (U)" -- The upper limit found by the boundary search, displayed after it has completed.
@@ -98,44 +98,45 @@ The "3. Current Status" tab will show the following items:
                             the Leq value in "Current Leq (C)". Otherwise, this will be 0.
 - "Current Leq (C)" -- If the binary search has started, this will be the Leq value measured by the VI when the current 
                            audio track is played back at the gain value in "Current gain (G)". Otherise, this will be 0.
-Final results for previous track:
-    - "Final gain" -- The gain that needs to be applied to the previous audio track to calibrate it to the value in "Final Leq".
-    - "Final Leq" -- The Leq value measured by the VI when the audio track is played back at the gain value in "Final gain".
-    - "Total # of calls to MeasureLeq" -- The number of times that MeasureLeq was called for the previous track.
+*Final results for previous track:*
+- "Final gain" -- The gain that needs to be applied to the previous audio track to calibrate it to the value in "Final Leq".
+- "Final Leq" -- The Leq value measured by the VI when the audio track is played back at the gain value in "Final gain".
+- "Total # of calls to MeasureLeq" -- The number of times that MeasureLeq was called for the previous track.
 
 Except for "Final results for previous track", all the variables will be initialized to 0 at the end of each file and updated when called.
 
 Footnotes
+---------
 
 <p>*The input CSV file should contain a header row, followed by one row for every file that you want to calibrate. The header should contain the following columns in order:
-    - "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
-    - "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
-    - "Tolernce (T)" -- The tolerance of current track for the calibration, in decibels. T must be a positive real number.
-                        The VI will output a value of the gain that calibrates the track to an Leq in the range [D-T, D+T].
-    - "Initial guess (G)" -- Your initial guess for the gain. G must be a positive real number.
-    - "Multiplier (M)" -- The multiplier for the boundary search, which controls the coarseness of the boundary search.
-                          M must be a real number strictly greater than 1.
-                          In general, a larger value will allow the boundary search to converge more quickly,
-                          at the expense of a larger search space for the binary search.
-    - "Max. iterations for boundary search (N)" -- The maximum number of iterations allowed for the boundary search. The search
-                                                   is considered unsuccessful if the number of iterations exceeds this value.
-    - "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
-                                                 is considered unsuccessful if the number of iterations exceeds this value.</p>
+- "Filepath" -- The path to the audio track to be calibrated (absolute path or relative path to the CSV file's directory). 
+- "Desired Leq (D)" -- The Leq that you wish to calibrate the current track to, in decibels.
+- "Tolernce (T)" -- The tolerance of current track for the calibration, in decibels. T must be a positive real number.
+                    The VI will output a value of the gain that calibrates the track to an Leq in the range [D-T, D+T].
+- "Initial guess (G)" -- Your initial guess for the gain. G must be a positive real number.
+- "Multiplier (M)" -- The multiplier for the boundary search, which controls the coarseness of the boundary search.
+                      M must be a real number strictly greater than 1.
+                      In general, a larger value will allow the boundary search to converge more quickly,
+                      at the expense of a larger search space for the binary search.
+- "Max. iterations for boundary search (N)" -- The maximum number of iterations allowed for the boundary search. The search
+                                               is considered unsuccessful if the number of iterations exceeds this value.
+- "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
+                                             is considered unsuccessful if the number of iterations exceeds this value.</p>
 
 <p>**The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
 The header will contain the following columns in order:
-    - "Filepath" -- The path to the audio track to be calibrated.
-    - "Gain" -- A positive real number specifying the gain that needs to be applied to the audio track to calibrate it to the
-                value in "Leq" column. If the search is unsuccessful, the value will be -1.
-    - "Leq" -- The Leq value measured by the VI when the audio track is played back at the gain value in the "Gain" column.
-    - "Calls to MeasureLeq" -- The total number of times that the VI played back the audio track to obtain the value in the 
-                               "Gain" column.
-    - "Boundary search iterations" -- The number of iterations taken for the boundary search for this audio track.
-    - "Binary search iterations" -- The number of iterations taken for the binary search for this audio track.
-    - "Within range" -- "Y" if the value in "gain" does not result in clipping of the audio track,
-                        and "N" if it results in clipping.
-    - "Date" -- System date when the VI accomplished searching for the audio track located at the path in "Filepath".
-    - "Time" -- System time when the VI accomplished searching for the audio track located at the path in "Filepath".
+- "Filepath" -- The path to the audio track to be calibrated.
+- "Gain" -- A positive real number specifying the gain that needs to be applied to the audio track to calibrate it to the
+            value in "Leq" column. If the search is unsuccessful, the value will be -1.
+- "Leq" -- The Leq value measured by the VI when the audio track is played back at the gain value in the "Gain" column.
+- "Calls to MeasureLeq" -- The total number of times that the VI played back the audio track to obtain the value in the 
+                           "Gain" column.
+- "Boundary search iterations" -- The number of iterations taken for the boundary search for this audio track.
+- "Binary search iterations" -- The number of iterations taken for the binary search for this audio track.
+- "Within range" -- "Y" if the value in "gain" does not result in clipping of the audio track,
+                     and "N" if it results in clipping.
+- "Date" -- System date when the VI accomplished searching for the audio track located at the path in "Filepath".
+- "Time" -- System time when the VI accomplished searching for the audio track located at the path in "Filepath".
 If many values in the "Gain" column are -1 (indicating many unsuccessful searches), try increasing the value of N, M, or T, in that order. If many values in the "Within range" column are "N", try increasing the physical gain of your system (e.g. turn up your volumn knob).</p>
 
 <p>***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.</p>
