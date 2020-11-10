@@ -86,17 +86,17 @@ The "3. Current Status" tab will show the following items:
 - "Progress (%)" -- The proportion of tracks for which an appropriate gain has been found to calibrate it to the desired Leq, expressed as a percentage. 
 - "Number of tracks to calibrate" -- Number of files to calibrate, as read by the VI from your input CSV file.
     
-Input parameters for current track: 
-    - All input parameters for the current track as read from the input CSV file headers*.
-Results for current track:
-    - "Adjusted initial guess" -- The gain after the first adjustment to the initial guess (denoted as G' in our paper).
-    - "Boundary search iteration (n)" -- The current iteration of the boundary search, or 0 if boundary search has not started.
-    - "Lower limit (L)" -- The lower limit found by the boundary search, displayed after it has completed.
-    - "Upper limit (U)" -- The upper limit found by the boundary search, displayed after it has completed.
-    - "Binary search iteration (n)" -- The current iteration of the binary search, or 0 if the binary search has not started.
-    - "Current gain (G)" -- If the binary search has started, this will be the gain applied to the current audio track to obtain 
+*Input parameters for current track: *
+- All input parameters for the current track as read from the input CSV file headers*.
+*Results for current track:*
+- "Adjusted initial guess": The gain after the first adjustment to the initial guess (denoted as G' in our paper).
+- "Boundary search iteration (n)" -- The current iteration of the boundary search, or 0 if boundary search has not started.
+- "Lower limit (L)" -- The lower limit found by the boundary search, displayed after it has completed.
+- "Upper limit (U)" -- The upper limit found by the boundary search, displayed after it has completed.
+- "Binary search iteration (n)" -- The current iteration of the binary search, or 0 if the binary search has not started.
+- "Current gain (G)" -- If the binary search has started, this will be the gain applied to the current audio track to obtain 
                             the Leq value in "Current Leq (C)". Otherwise, this will be 0.
-    - "Current Leq (C)" -- If the binary search has started, this will be the Leq value measured by the VI when the current 
+- "Current Leq (C)" -- If the binary search has started, this will be the Leq value measured by the VI when the current 
                            audio track is played back at the gain value in "Current gain (G)". Otherise, this will be 0.
 Final results for previous track:
     - "Final gain" -- The gain that needs to be applied to the previous audio track to calibrate it to the value in "Final Leq".
