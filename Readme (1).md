@@ -126,8 +126,9 @@ Footnotes
 - "Max. iterations for binary search (N)" -- The maximum number of iterations allowed for the binary search. The search
                                              is considered unsuccessful if the number of iterations exceeds this value.
 
-__<p>**The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
-The header will contain the following columns in order:</p>__
+<p>**The output CSV file will contain a header row, followed by one row for every non-header row in the input CSV file.
+The header will contain the following columns in order:</p>
+
 - "Filepath" -- The path to the audio track to be calibrated.
 - "Gain" -- A positive real number specifying the gain that needs to be applied to the audio track to calibrate it to the
             value in "Leq" column. If the search is unsuccessful, the value will be -1.
@@ -142,7 +143,7 @@ The header will contain the following columns in order:</p>__
 - "Time" -- System time when the VI accomplished searching for the audio track located at the path in "Filepath".
 If many values in the "Gain" column are -1 (indicating many unsuccessful searches), try increasing the value of N, M, or T, in that order. If many values in the "Within range" column are "N", try increasing the physical gain of your system (e.g. turn up your volumn knob).
 
-__<p>***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.</p>__
+<p>***Note that values in the "Master Settings" panel will override those in the "XControl Settings" panel. If you encounter a "memory is full" error, try stopping the VI and running it again without changing any further settings. For further information, please refer to https://zone.ni.com/reference/en-XX/help/372416L-01/sndvibtk/daqmx_configuration/.</p>
 
 Contact
 -------
