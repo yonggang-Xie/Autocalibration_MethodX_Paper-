@@ -4,9 +4,9 @@ This is a LabVIEW implementation of the automatic calibration method described i
 
 Getting started
 ---------------
-Firstly, clone this repository by manually downloading it from https://github.com/xxxx/xxxx.git, or enter the following line from a terminal:
+Firstly, clone this repository by manually downloading it from https://github.com/yonggang-Xie/Autocalibration_MethodX_Paper-/blob/main/20201109-Automatic-Calibration.zip, or enter the following line from a terminal:
 
-    git clone https://github.com/xxxx/xxxx.git
+    git clone [https://github.com/xxxx/xxxx.git](https://github.com/yonggang-Xie/Autocalibration_MethodX_Paper-/blob/main/20201109-Automatic-Calibration.zip)
 
 Then, Click-->'Code'-->'Main.vi' to get started. Follow the User guide <a href='#User Guide'>User Guide</a>  in 'Main.vi' for further process.
 
