@@ -1,6 +1,6 @@
 # Automatic-Calibration
 
-This is a LabVIEW implementation of the automatic calibration method described in "Automation of binaural headphone audio calibration on an artificial head" (Kenneth Ooi, Yonggang Xie, Bhan Lam, Woon-Seng Gan).
+This is a LabVIEW implementation of the automatic calibration method described in "Automation of binaural headphone audio calibration on an artificial head" (Kenneth Ooi, Yonggang Xie, Bhan Lam, Woon-Seng Gan).More detail on https://www.sciencedirect.com/science/article/pii/S2215016121000819?via%3Dihub
 
 Getting started
 ---------------
